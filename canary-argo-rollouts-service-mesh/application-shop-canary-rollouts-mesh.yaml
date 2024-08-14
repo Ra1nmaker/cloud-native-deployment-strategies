@@ -10,14 +10,14 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: helm/quarkus-helm-umbrella/chart
-    repoURL:  https://github.com/ra1nmaker/cloud-native-deployment-strategies.git
+    repoURL: "https://github.com/ra1nmaker/cloud-native-deployment-strategies.git"
     targetRevision: rollouts-mesh
     helm:
       parameters:
       - name: "global.namespace"
         value: gitops
       - name: "domain"
-        value: "gitops-4437b16c19b7f9ed01f38b8be3c782d0-0000.jp-tok.containers.appdomain.cloud"
+        value: "mesh-4437b16c19b7f9ed01f38b8be3c782d0-0000.jp-tok.containers.appdomain.cloud"
       valueFiles:
         - values/values-canary-rollouts-mesh.yaml
   project: default
